@@ -1,7 +1,7 @@
 """제출용 빌드: 모든 CSS·JS·이미지·글꼴을 HTML 한 파일에 담고 ZIP으로 묶는다.
 
 사용법: python build.py
-결과물: dist/smart_photo_editor.html, 바탕화면의 스마트사진편집_제출.zip
+결과물: dist/index.html, 바탕화면의 스마트사진편집_제출.zip
 """
 import base64
 import re
@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 DIST = ROOT / "dist"
-HTML_NAME = "smart_photo_editor.html"
+HTML_NAME = "index.html"
 ZIP_PATH = ROOT.parent / "스마트사진편집_제출.zip"
 
 LIB_SCRIPTS = ["lib/jszip.min.js", "lib/pako.min.js", "lib/UTIF.js", "lib/heic2any.min.js"]
@@ -20,7 +20,7 @@ SOURCE_FILES = ["index.html", "style.css", "app.js", "kmou_logo.png", "build.py"
 
 README = """스마트 사진 편집 - 실행 방법
 
-1. smart_photo_editor.html 파일을 더블클릭하면 브라우저에서 바로 열립니다.
+1. index.html 파일을 더블클릭하면 브라우저에서 바로 열립니다.
    (크롬 또는 엣지 권장, 인터넷 연결 없이도 동작합니다)
 
 2. source_code 폴더에는 개발용 원본 코드가 들어 있습니다.
